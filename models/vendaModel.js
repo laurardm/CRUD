@@ -51,4 +51,9 @@ const Venda = {
   }
 };
 
+Categoria.findById(id, (err, categoria) => {
+  if (err) return res.status(500).json(err);
+  res.json(categoria);
+});
+
 module.exports = Venda;
